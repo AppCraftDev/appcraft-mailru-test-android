@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="exit_duration">2500</integer>
+    <integer name="logo_animate_duration">1000</integer>
+    <integer name="default_animation_duration">200</integer>
+    <integer name="preload_item_position">10</integer>
+
+
+    <integer name="auth_code_length">6</integer>
+    <integer name="field_max_length">32</integer>
+
+    <integer name="profile_first_name_limit">32</integer>
+    <integer name="profile_last_name_limit">32</integer>
+</resources>

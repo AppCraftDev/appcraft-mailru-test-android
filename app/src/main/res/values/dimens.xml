@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="baseline_grid_small">8dp</dimen>
+    <dimen name="baseline_grid">16dp</dimen>
+    <dimen name="baseline_grid_medium">24dp</dimen>
+    <dimen name="baseline_grid_large">32dp</dimen>
+</resources>

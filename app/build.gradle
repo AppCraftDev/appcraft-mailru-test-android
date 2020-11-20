@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'koin'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+
+    defaultConfig {
+        applicationId "ru.mailru_test"
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode 1
+        versionName "0.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        archivesBaseName = "mailru_test-$versionName($versionCode)"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    rootProject.buildTypes(this)
+    rootProject.javaVersion(this)
+
+    androidExtensions { experimental = true }
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+dependencies {
+    implementation(project(path: ":domain")) { transitive = false }
+    implementation(project(path: ":data")) { transitive = false }
+    implementation(project(path: ":resources")) { transitive = false }
+
+    implementation dependenciesMap.rxRelay
+    implementation dependenciesMap.appCompat
+    implementation dependenciesMap.material
+    implementation dependenciesMap.constraintLayout
+    implementation dependenciesMap.lifecycleExtentions
+    implementation dependenciesMap.lifecycleReactive
+    implementation dependenciesMap.lifecycleRuntime
+    implementation dependenciesMap.liveDataExt
+    implementation dependenciesMap.swipeToRefresh
+    implementation dependenciesMap.viewmodel
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt dependenciesMap.lifecycleCompiler
+    implementation dependenciesMap.cicerone
+    implementation dependenciesMap.fragmentKtx
+    implementation dependenciesMap.activityKtx
+    implementation dependenciesMap.crashlyitcs
+    implementation dependenciesMap.firebaseAuth
+    implementation dependenciesMap.firebaseMessaging
+    implementation dependenciesMap.firebaseLinks
+    implementation dependenciesMap.firebaseAnalytic
+    implementation dependenciesMap.glide
+    implementation dependenciesMap.glideSvg
+    implementation dependenciesMap.blurry
+    kapt dependenciesMap.glideCompiler
+    implementation dependenciesMap.okHttpGlideIntegration
+    implementation dependenciesMap.viewpager2
+    implementation dependenciesMap.rxJava
+    implementation dependenciesMap.rxAndroid
+    implementation dependenciesMap.karumiDexter
+    implementation dependenciesMap.koin
+    implementation dependenciesMap.koinViewModel
+    implementation dependenciesMap.kotlin
+    implementation dependenciesMap.kotlinCoroutines
+    implementation dependenciesMap.coreKtx
+    implementation dependenciesMap.rxRelay
+    implementation dependenciesMap.room
+    kapt dependenciesMap.roomCompiler
+    implementation dependenciesMap.roomKtx
+    implementation dependenciesMap.stetho
+    implementation dependenciesMap.zxingCore
+    implementation dependenciesMap.timber
+    implementation dependenciesMap.okio
+    implementation dependenciesMap.lottie
+    implementation dependenciesMap.epoxy
+    implementation dependenciesMap.epoxyPaging
+    kapt dependenciesMap.epoxyAnnotation
+    implementation dependenciesMap.securityCrypto
+    implementation dependenciesMap.tink
+    implementation dependenciesMap.koinTest
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'

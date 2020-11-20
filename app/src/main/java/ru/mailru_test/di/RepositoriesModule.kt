@@ -1,0 +1,1 @@
+package ru.mailru_test.diimport org.koin.android.ext.koin.androidContextimport org.koin.dsl.moduleimport ru.mailru_test.data.repository.AuthRepositoryImplimport ru.mailru_test.domain.repository.ContactsRepositoryinternal val repositoriesModule = module {    single<ContactsRepository> { AuthRepositoryImpl(androidContext(), get(), get()) }}

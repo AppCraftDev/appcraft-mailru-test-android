@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'koin'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+    }
+    rootProject.buildTypes(this)
+    rootProject.javaVersion(this)
+    androidExtensions { experimental = true }
+}
+
+dependencies {
+    implementation(project(path: ":resources")) { transitive = false }
+
+    api dependenciesMap.coreKtx
+    implementation dependenciesMap.koinCore
+    implementation dependenciesMap.lifecycleExtentions
+    implementation dependenciesMap.lifecycleReactive
+    kapt dependenciesMap.lifecycleCompiler
+    api dependenciesMap.rxJava
+    api dependenciesMap.rxAndroid
+    api dependenciesMap.rxAndroid
+    api dependenciesMap.retrofitMoshiConverter
+    api dependenciesMap.room
+    kapt dependenciesMap.roomCompiler
+    api dependenciesMap.roomKtx
+    api dependenciesMap.kotlinCoroutines
+    api dependenciesMap.timber
+    api dependenciesMap.rxRelay
+}

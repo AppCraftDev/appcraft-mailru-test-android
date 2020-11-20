@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "827695866246",
+    "firebase_url": "https://mytempproject-3d2b3.firebaseio.com",
+    "project_id": "mytempproject-3d2b3",
+    "storage_bucket": "mytempproject-3d2b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827695866246:android:29e68d5e5c7208caa6cc07",
+        "android_client_info": {
+          "package_name": "ru.mailru_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827695866246-fbein9t4v26qb2ms5diidaf2hpei830t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxMgt-fEV7yqWhV8DOj_l_rqTVu8oxNrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827695866246-fbein9t4v26qb2ms5diidaf2hpei830t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

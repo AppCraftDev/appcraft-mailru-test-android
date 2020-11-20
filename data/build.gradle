@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'koin'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+    }
+    rootProject.buildTypes(this)
+    rootProject.javaVersion(this)
+    androidExtensions { experimental = true }
+}
+
+dependencies {
+    implementation(project(path: ":domain")) { transitive = false }
+    implementation(project(path: ":resources")) { transitive = false }
+
+    implementation dependenciesMap.koinCore
+    implementation dependenciesMap.koin
+    api dependenciesMap.retrofit
+    api dependenciesMap.retrofitMoshiConverter
+    api dependenciesMap.okhttp
+    api dependenciesMap.okHttpInterceptor
+    api dependenciesMap.kotlin
+    api dependenciesMap.rxJava
+    api dependenciesMap.rxAndroid
+    api dependenciesMap.rxPaparazzo
+    api dependenciesMap.rxdownload3
+    api dependenciesMap.rxRelay
+    api dependenciesMap.lifecycleExtentions
+    api dependenciesMap.lifecycleReactive
+    api dependenciesMap.liveDataExt
+    kapt dependenciesMap.lifecycleCompiler
+    api dependenciesMap.room
+    kapt dependenciesMap.roomCompiler
+    api dependenciesMap.roomKtx
+    api dependenciesMap.timber
+    api dependenciesMap.firebaseLinks
+    api dependenciesMap.kotlinCoroutines
+    api dependenciesMap.okio
+    api dependenciesMap.securityCrypto
+    api dependenciesMap.tink
+    api dependenciesMap.koinTest
+}
+

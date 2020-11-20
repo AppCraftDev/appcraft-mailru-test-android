@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Mail Test</string>
+
+    <string name="notification_channel_system">Системные</string>
+
+    <string name="error_occurred">Произошла ошибка</string>
+    <string name="error_network_forbidden">Нет доступа</string>
+    <string name="error_qr_code">Код не найден</string>
+    <string name="error_invalid_rating">Невалидный рейтинг</string>
+    <string name="error_file_not_found">Файл не найден</string>
+    <string name="error_unknown">Неизвестная ошибка</string>
+    <string name="error_argument_common">Ошибка аргумента</string>
+    <string name="error_argument_list_null">Получено пустое значение списка</string>
+    <string name="error_argument_null" formatted="true">Получено пустое значение %s</string>
+    <string name="error_network">Ошибка сети</string>
+    <string name="error_refresh">Обновить</string>
+    <string name="error_unknown_network">Ошибка подключения</string>
+
+    <string name="contacts_permission_rationale">Для доступа к контактам требуется дать доступ</string>
+    <string name="request_access">Запросить доступ</string>
+</resources>

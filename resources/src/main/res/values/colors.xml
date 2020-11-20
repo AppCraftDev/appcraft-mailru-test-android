@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorSecondary">#4CC2F6</color>
+    <color name="colorAccent">#4CC2F6</color>
+    <color name="rippleColor">#6DD1FB</color>
+    <color name="colorSecondary15">#264CC2F6</color>
+
+    <color name="bgMain">#F7F8FA</color>
+    <color name="bgHalfTransparent">#3D263238</color>
+    <color name="bgBlur">#F2F3F6</color>
+    <color name="shadowCard">#DFE5ED</color>
+    <color name="shadowToolbar">#8C8E91</color>
+
+    <color name="errorTextColor">#EC1439</color>
+    <color name="errorBgColor">#1FF07A8F</color>
+    <color name="tintImage">#32000000</color>
+
+    <color name="bgInput">#F7F8FA</color>
+    <color name="bgInputError">#F07A8F</color>
+    <color name="bgDark">#0F283E</color>
+    <color name="bgBnIndicator">#CC4CC2F6</color>
+    <color name="bgDeviceColor">#DDF0F9</color>
+    <color name="bgButtonError">#FFB8C4</color>
+
+    <color name="textMain">#263238</color>
+    <color name="textHint">#A4AEB8</color>
+    <color name="textSubtitle">#A4AEB8</color>
+    <color name="textLight">#FFFFFF</color>
+    <color name="textSubtitleDark">#0F283E</color>
+    <color name="textNumber">#0F283E</color>
+    <color name="textLogoSubtitle">#80F6F6F6</color>
+    <color name="textIndicator">#078ECA</color>
+    <color name="textMainLight">#536575</color>
+
+    <color name="colorOverlay">#4D000000</color>
+    <color name="colorControl">#979797</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="bnInactive">#F0F0F0</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+</resources>
