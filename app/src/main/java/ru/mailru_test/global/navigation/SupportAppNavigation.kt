@@ -9,7 +9,7 @@ import androidx.transition.Slide
 import com.github.terrakok.cicerone.Command
 import com.github.terrakok.cicerone.androidx.AppNavigator
 import org.jetbrains.annotations.NotNull
-import ru.mailru_test.app.feature.splash.ContactsFragment
+import ru.mailru_test.app.feature.contacts.ContactsFragment
 import ru.mailru_test.global.ui.fragment.BaseFragment
 
 open class SupportAppNavigation(private val appActivity: @NotNull AppCompatActivity, containerId: Int) :

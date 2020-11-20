@@ -1,4 +1,4 @@
-package ru.mailru_test.app.feature.splash
+package ru.mailru_test.app.feature.contacts
 
 import android.os.Bundle
 import android.view.View
@@ -6,10 +6,10 @@ import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.fragment_contacts.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.mailru_test.R
-import ru.mailru_test.global.extension.PermissionState
-import ru.mailru_test.global.extension.observe
-import ru.mailru_test.global.extension.permissionContactsIsGranted
-import ru.mailru_test.global.extension.requestContactsPermission
+import ru.mailru_test.app.Screens
+import ru.mailru_test.app.adapter.controller.ContactsPreviewController
+import ru.mailru_test.domain.model.Contact
+import ru.mailru_test.global.extension.*
 import ru.mailru_test.global.ui.fragment.BaseFragment
 
 class ContactsFragment : BaseFragment() {
@@ -18,9 +18,16 @@ class ContactsFragment : BaseFragment() {
 
     private val contactsViewModel by viewModel<ContactsViewModel>()
 
+    private val contactsController by lazy { ContactsPreviewController(this::onContact) }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initAdapters()
         initListeners()
+    }
+
+    private fun initAdapters() {
+        rvContacts.adapter = contactsController.adapter
     }
 
     override fun observeViewModel() {
@@ -31,10 +38,17 @@ class ContactsFragment : BaseFragment() {
                     is PermissionState.Granted -> enableContactsUI(true)
                 }
             }
+            observe(contacts) {
+                contactsController.setData(it)
+            }
             if (permissionContactsIsGranted() == PermissionState.Granted) {
                 setPermissionState(PermissionState.Granted)
             }
         }
+    }
+
+    private fun onContact(contact: Contact) {
+        router.navigateTo(Screens.contactDetails(contact))
     }
 
     private fun initListeners() {
