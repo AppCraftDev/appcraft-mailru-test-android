@@ -16,6 +16,10 @@
     <string name="error_refresh">Обновить</string>
     <string name="error_unknown_network">Ошибка подключения</string>
 
-    <string name="contacts_permission_rationale">Для доступа к контактам требуется дать доступ</string>
+    <string name="contacts_permission_rationale">Для доступа к контактам требуется дать разрешение</string>
     <string name="request_access">Запросить доступ</string>
+    <string name="contact_title">Контакт</string>
+    <string name="contacts_title">Контакты</string>
+    <string name="contacts_permission_rational">Предоставьте разрешение</string>
+    <string name="permission_setting">Настройки</string>
 </resources>

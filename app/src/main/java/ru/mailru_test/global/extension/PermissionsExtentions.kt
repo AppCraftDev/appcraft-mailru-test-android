@@ -48,7 +48,6 @@ private fun Context.checkPermissions(permissions: List<String>, callback: (permi
                     override fun onPermissionRationaleShouldBeShown(permissions: MutableList<PermissionRequest>?, token: PermissionToken?) {
                         super.onPermissionRationaleShouldBeShown(permissions, token)
                         token?.continuePermissionRequest()
-//                        callback(PermissionState.Denied(true))
                     }
                 }
             )
@@ -67,5 +66,5 @@ sealed class PermissionState {
 
     fun isGranted() = this is Granted
 
-    fun isNeedRational() = this is Denied && this.rationale
+//    fun isNeedRational() = this is Denied && this.rationale
 }

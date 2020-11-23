@@ -5,5 +5,4 @@ import ru.mailru_test.domain.model.Contact
 interface ContactsRepository {
 
     suspend fun getContacts(): List<Contact>
-
 }

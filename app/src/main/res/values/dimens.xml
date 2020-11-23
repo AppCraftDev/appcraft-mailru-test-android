@@ -4,4 +4,6 @@
     <dimen name="baseline_grid">16dp</dimen>
     <dimen name="baseline_grid_medium">24dp</dimen>
     <dimen name="baseline_grid_large">32dp</dimen>
+
+    <dimen name="corner_default">6dp</dimen>
 </resources>

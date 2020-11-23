@@ -25,14 +25,6 @@ dependencies {
     implementation dependenciesMap.lifecycleExtentions
     implementation dependenciesMap.lifecycleReactive
     kapt dependenciesMap.lifecycleCompiler
-    api dependenciesMap.rxJava
-    api dependenciesMap.rxAndroid
-    api dependenciesMap.rxAndroid
-    api dependenciesMap.retrofitMoshiConverter
-    api dependenciesMap.room
-    kapt dependenciesMap.roomCompiler
-    api dependenciesMap.roomKtx
     api dependenciesMap.kotlinCoroutines
     api dependenciesMap.timber
-    api dependenciesMap.rxRelay
 }

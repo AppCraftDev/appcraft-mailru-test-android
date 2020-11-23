@@ -6,7 +6,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Contact(
     val id: Long,
-    val label: String,
+    var label: String,
     val avatar: String?,
     val avatarThumbnail: String?,
     var phoneNumbers: MutableList<String> = ArrayList(),

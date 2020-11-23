@@ -106,4 +106,4 @@ app/release/app-release.aab
 # Custom
 
 keystore.properties
-mailru_test.jks
+mail_test.jks

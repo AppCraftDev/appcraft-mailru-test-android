@@ -4,7 +4,6 @@ val appComponent = listOf(
     appModule,
     repositoriesModule,
     interactorModule,
-    databaseModule,
     viewModelsModule,
     navigationModule
 )

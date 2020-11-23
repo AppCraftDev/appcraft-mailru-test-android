@@ -20,7 +20,6 @@ abstract class UseCaseParams<in P, R >(private val coroutineDispatcher: Coroutin
         }
     }
 
-
     @Throws(RuntimeException::class)
     protected abstract suspend fun execute(params: P): R
 }

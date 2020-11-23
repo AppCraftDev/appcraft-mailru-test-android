@@ -21,19 +21,6 @@ class ErrorHandler(var res: Resources) {
     private fun getUserMessage(error: Throwable): String {
         return when (error) {
             is IOException -> res.getString(getIOErrorMessageRes(error))
-            is IllegalArgumentException -> {
-                return if (error.message?.contains("checkParameterIsNotNull") == true) {
-
-                    val messageHeader = res.getString(R.string.error_argument_common)
-                    val regex = Regex(".* parameter (?:\\\$\\w+\\\$)?(\\w+)")
-                    val nullParameter = error.message?.replace(regex, "$1") ?: ""
-                    val messageDetails = if (nullParameter == "collectionSizeOrDefault")
-                        res.getString(R.string.error_argument_list_null)
-                    else res.getString(R.string.error_argument_null, nullParameter)
-
-                    "$messageHeader\n$messageDetails"
-                } else error.message ?: ""
-            }
             else -> {
                 if (BuildConfig.BUILD_TYPE == "debug" || BuildConfig.BUILD_TYPE == "internal")
                     error.message ?: res.getString(R.string.error_unknown)
