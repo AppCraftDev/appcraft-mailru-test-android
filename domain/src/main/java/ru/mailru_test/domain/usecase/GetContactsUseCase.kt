@@ -2,7 +2,6 @@ package ru.mailru_test.domain.usecase
 
 import ru.mailru_test.domain.global.CoroutineProvider
 import ru.mailru_test.domain.global.UseCase
-import ru.mailru_test.domain.global.UseCaseParams
 import ru.mailru_test.domain.model.Contact
 import ru.mailru_test.domain.repository.ContactsRepository
 

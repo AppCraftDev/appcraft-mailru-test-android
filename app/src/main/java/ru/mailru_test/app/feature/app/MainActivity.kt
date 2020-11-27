@@ -10,10 +10,10 @@ import ru.mailru_test.R
 import ru.mailru_test.app.Screens
 import ru.mailru_test.domain.global.empty
 import ru.mailru_test.global.extension.observeEvent
-import ru.mailru_test.global.notifier.Notifier
-import ru.mailru_test.global.notifier.SystemMessage
 import ru.mailru_test.global.navigation.AppRouter
 import ru.mailru_test.global.navigation.SupportAppNavigation
+import ru.mailru_test.global.notifier.Notifier
+import ru.mailru_test.global.notifier.SystemMessage
 import ru.mailru_test.global.utils.showActionMessage
 import ru.mailru_test.global.utils.showAlert
 import ru.mailru_test.global.utils.showBarMessage

@@ -2,7 +2,6 @@ package ru.mailru_test.app.delegate
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.distinctUntilChanged
 import ru.mailru_test.global.extension.PermissionState
 
 interface PermissionViewModelDelegate {

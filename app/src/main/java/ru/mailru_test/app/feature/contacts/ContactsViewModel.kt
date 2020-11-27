@@ -6,8 +6,8 @@ import androidx.lifecycle.switchMap
 import ru.mailru_test.app.delegate.ContactsPermissionViewModelDelegate
 import ru.mailru_test.app.delegate.PermissionViewModelDelegate
 import ru.mailru_test.domain.model.Result
-import ru.mailru_test.global.notifier.Notifier
 import ru.mailru_test.domain.usecase.GetContactsUseCase
+import ru.mailru_test.global.notifier.Notifier
 import ru.mailru_test.global.presentation.ErrorHandler
 import ru.mailru_test.global.ui.viewmodel.BaseViewModel
 

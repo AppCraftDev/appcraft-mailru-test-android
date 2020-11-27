@@ -2,7 +2,6 @@ package ru.mailru_test.app.adapter.controller
 
 import com.airbnb.epoxy.TypedEpoxyController
 import ru.mailru_test.app.adapter.contactItem
-import ru.mailru_test.app.adapter.contactPreviewItem
 import ru.mailru_test.app.adapter.phoneItem
 import ru.mailru_test.domain.model.Contact
 

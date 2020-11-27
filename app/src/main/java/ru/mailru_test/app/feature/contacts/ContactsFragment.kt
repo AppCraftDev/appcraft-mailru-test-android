@@ -13,8 +13,8 @@ import ru.mailru_test.app.Route
 import ru.mailru_test.app.Screens
 import ru.mailru_test.app.adapter.controller.ContactsPreviewController
 import ru.mailru_test.domain.model.Contact
-import ru.mailru_test.global.notifier.Notifier
 import ru.mailru_test.global.extension.*
+import ru.mailru_test.global.notifier.Notifier
 import ru.mailru_test.global.ui.fragment.BaseFragment
 
 class ContactsFragment : BaseFragment() {
@@ -29,6 +29,7 @@ class ContactsFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupToolbar(getString(R.string.contacts_title))
         initAdapters()
         initListeners()
     }

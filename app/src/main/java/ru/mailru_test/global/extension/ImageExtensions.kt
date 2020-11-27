@@ -3,12 +3,10 @@ package ru.mailru_test.global.extension
 import android.widget.ImageView
 import androidx.annotation.DimenRes
 import androidx.annotation.DrawableRes
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import ru.mailru_test.R
 import ru.mailru_test.global.glide.GlideApp
-import java.io.File
 
 fun ImageView.loadImage(@DrawableRes res: Int) {
     GlideApp.with(this)

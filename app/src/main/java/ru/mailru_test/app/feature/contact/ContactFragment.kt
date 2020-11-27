@@ -5,11 +5,9 @@ import android.view.View
 import kotlinx.android.synthetic.main.fragment_contact.*
 import ru.mailru_test.R
 import ru.mailru_test.app.Route
-import ru.mailru_test.app.Screens
 import ru.mailru_test.app.adapter.controller.PhoneNumbersController
 import ru.mailru_test.domain.model.Contact
-import ru.mailru_test.global.extension.loadImageCorner
-import ru.mailru_test.global.glide.GlideApp
+import ru.mailru_test.global.extension.setupToolbar
 import ru.mailru_test.global.ui.fragment.BaseFragment
 import ru.mailru_test.resources.Constants.EXTRA_DATA
 
@@ -23,6 +21,7 @@ class ContactFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupToolbar(contact.label, true)
         updateContact(contact)
     }
 
