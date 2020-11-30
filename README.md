@@ -1,5 +1,5 @@
 # Mail Test
-![](скринкаст.gif)
+![](https://github.com/AppCraftDev/appcraft-mailru-test-android/blob/develop/screencast.gif)
 Приложение для просмотра записей в AB
 ## Функции:
 - Экран списка контактов.
