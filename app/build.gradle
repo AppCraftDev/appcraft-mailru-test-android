@@ -50,9 +50,7 @@ dependencies {
     implementation dependenciesMap.fragmentKtx
     implementation dependenciesMap.activityKtx
     implementation dependenciesMap.crashlyitcs
-    implementation dependenciesMap.firebaseAnalytic
     implementation dependenciesMap.glide
-    implementation dependenciesMap.glideSvg
     kapt dependenciesMap.glideCompiler
     implementation dependenciesMap.karumiDexter
     implementation dependenciesMap.koin

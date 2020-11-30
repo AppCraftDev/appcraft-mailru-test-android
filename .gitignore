@@ -104,6 +104,4 @@ app/release/app-release.aab
 /.idea/
 
 # Custom
-
-keystore.properties
-mail_test.jks
+.gradlew
